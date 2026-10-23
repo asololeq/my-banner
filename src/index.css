@@ -1,0 +1,379 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100%;
+  }
+
+  body {
+    display: grid;
+    margin: 0;
+    place-items: center;
+    overflow: hidden;
+    background: #102134;
+  }
+}
+
+.banner {
+  display: block;
+  width: min(100vw, 1200px);
+  height: auto;
+  aspect-ratio: 4 / 1;
+}
+
+.identity-name {
+  animation: name-cycle 6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.identity-tagline {
+  animation: tagline-cycle 6s ease-in-out infinite;
+}
+
+.discipline {
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.discipline-coding {
+  animation-name: reveal-coding;
+}
+
+.discipline-web {
+  animation-name: reveal-web;
+}
+
+.discipline-security {
+  animation-name: reveal-security;
+}
+
+.discipline-design {
+  animation-name: reveal-design;
+}
+
+.journey-line {
+  animation: draw-journey 6s ease-in-out infinite;
+  stroke-dasharray: 1100;
+  stroke-dashoffset: 1100;
+}
+
+.journey-underlay {
+  animation: underlay-cycle 6s ease-in-out infinite;
+}
+
+.journey-arrow {
+  animation: arrow-cycle 6s ease-in-out infinite;
+}
+
+.node {
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.node-one {
+  animation-name: node-one-cycle;
+}
+
+.node-two {
+  animation-name: node-two-cycle;
+}
+
+.node-three {
+  animation-name: node-three-cycle;
+}
+
+.node-four {
+  animation-name: node-four-cycle;
+}
+
+.node-five {
+  animation-name: node-five-cycle;
+}
+
+@keyframes name-cycle {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  10%,
+  84% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes tagline-cycle {
+  0%,
+  7% {
+    opacity: 0;
+  }
+  18%,
+  84% {
+    opacity: 1;
+  }
+  94%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes reveal-coding {
+  0%,
+  8% {
+    opacity: 0;
+    transform: translateY(21px) scale(0.74);
+  }
+  18%,
+  42%,
+  84% {
+    opacity: 1;
+    transform: translateY(14px) scale(0.74);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.74);
+  }
+}
+
+@keyframes reveal-web {
+  0%,
+  15% {
+    opacity: 0;
+    transform: translateY(21px) scale(0.74);
+  }
+  25%,
+  84% {
+    opacity: 1;
+    transform: translateY(14px) scale(0.74);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.74);
+  }
+}
+
+@keyframes reveal-security {
+  0%,
+  22% {
+    opacity: 0;
+    transform: translateY(21px) scale(0.74);
+  }
+  32%,
+  84% {
+    opacity: 1;
+    transform: translateY(14px) scale(0.74);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.74);
+  }
+}
+
+@keyframes reveal-design {
+  0%,
+  29% {
+    opacity: 0;
+    transform: translateY(21px) scale(0.74);
+  }
+  39%,
+  84% {
+    opacity: 1;
+    transform: translateY(14px) scale(0.74);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: translateY(12px) scale(0.74);
+  }
+}
+
+@keyframes draw-journey {
+  0%,
+  8% {
+    stroke-dashoffset: 1100;
+  }
+  62%,
+  84% {
+    stroke-dashoffset: 0;
+  }
+  94%,
+  100% {
+    opacity: 0;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes underlay-cycle {
+  0%,
+  5% {
+    opacity: 0;
+  }
+  16%,
+  84% {
+    opacity: 1;
+  }
+  94%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-cycle {
+  0%,
+  57% {
+    opacity: 0;
+  }
+  66%,
+  84% {
+    opacity: 1;
+  }
+  94%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes node-one-cycle {
+  0%,
+  12% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  18% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+  24%,
+  72% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  78% {
+    transform: scale(1.25);
+  }
+  84% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes node-two-cycle {
+  0%,
+  21% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  27% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+  33%,
+  84% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes node-three-cycle {
+  0%,
+  30% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  36% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+  42%,
+  84% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes node-four-cycle {
+  0%,
+  39% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  45% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+  51%,
+  84% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@keyframes node-five-cycle {
+  0%,
+  51% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  57% {
+    opacity: 1;
+    transform: scale(1.35);
+  }
+  63%,
+  84% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  94%,
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner * {
+    animation: none !important;
+  }
+
+  .discipline {
+    transform: translateY(14px) scale(0.74);
+  }
+}

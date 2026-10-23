@@ -1,0 +1,10 @@
+{
+  "description": "Creates personalized GitHub profile banners themed around technology growth, coding, web, security, and design with custom sizes and color palettes.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

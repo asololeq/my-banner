@@ -42,7 +42,7 @@ export default function App() {
           fontWeight="700"
           letterSpacing=".15"
         >
-          Sola (서라)
+          Sola (설라)
         </text>
         <text
           className="identity-tagline"
